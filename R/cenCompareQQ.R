@@ -68,7 +68,7 @@ cenCompareQQ <- function(x.var, cens.var, Yname = yname, printrslt=TRUE,...)  {
 
   else  # all data are detects
   { cen.logical <- as.logical(cen.var)
-  var.choose <- EnvStats::distChoose(x=y.var, method = "sf", alpha = 0.05, choices = c("norm", "gamma", "lnorm"))
+  var.choose <- EnvStats::distChoose(y=y.var, method = "sf", alpha = 0.05, choices = c("norm", "gamma", "lnorm"))
   norm.text <- paste("Shapiro-Francia W =", signif(var.choose$test.results$norm$statistic, 3) )
   lnorm.text <- paste("Shapiro-Francia W =", signif(var.choose$test.results$lnorm$statistic, 3) )
   gamma.text <- paste("Shapiro-Francia W =", signif(var.choose$test.results$gamma$statistic, 3) )
